@@ -3,7 +3,7 @@ from django.http import JsonResponse
 import openai
 
 
-openai_api_key = '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'
+openai_api_key = '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'
 openai.api_key = openai_api_key
 
 def ask_openai(message):
@@ -13,7 +13,7 @@ def ask_openai(message):
         max_tokens=150,
         n=1,
         stop=None,
-        temperature=0.8,
+        temperature=0,
     )
     
     answer = response.choices[0].text.strip()
